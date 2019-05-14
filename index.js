@@ -4,11 +4,13 @@ function takeANumber(katzDeliLine, name){
   if(Array.isArray(name)){ //if more than one person is joining the line or name is a list
     for(var i = 0; i<name.length; i++){ //iterate through the array of names
       katzDeliLine.push(name[i]); // add each individual name to the line
-      return "Welcome, " + name[i] + ". You are number " + katzDeliLine.length + " in line."; // welcome each customer individually
+      ticketNumber++;
+      return "Welcome, " + name[i] + ". You are number " + ticketNumber + " in line."; // welcome each customer individually
     }
   } else {
     katzDeliLine.push(name); //otherwise,just add the name to the line
-    return "Welcome, " + name + ". You are number " + katzDeliLine.length + " in line."; //welcome them
+    ticketNumber++;
+    return "Welcome, " + name + ". You are number " + ticketNumber + " in line."; //welcome them
   }
 }
 
