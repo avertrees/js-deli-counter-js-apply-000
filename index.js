@@ -1,3 +1,5 @@
+var ticketNumber = 0;
+
 function takeANumber(katzDeliLine, name){
   if(Array.isArray(name)){ //if more than one person is joining the line or name is a list
     for(var i = 0; i<name.length; i++){ //iterate through the array of names
